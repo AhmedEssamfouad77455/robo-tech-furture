@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="overflow-hidden w-screen py-42 h-screen bg-indigo-500 flex items-center justify-center"
+    className="overflow-hidden w-screen py-42 h-screen bg-[#ec407a] flex items-center justify-center"
     >
       <motion.div
         className="max-w-4xl text-center px-6"

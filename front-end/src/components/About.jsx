@@ -11,16 +11,15 @@ const About = () => {
       className="py-16"
     >
       <h1 className="text-3xl font-semibold text-center mx-auto">
-        About our apps
+       About Robo Tech
       </h1>
       <p className="text-sm text-slate-500 text-center mt-2 max-w-md mx-auto">
-        A visual collection of our most recent works - each piece crafted with
-        intention, emotion and style.
+      An innovative academy shaping the next generation of thinkers and creators — empowering students with STEM, coding, robotics and engineering skills to turn imagination into reality.
       </p>
 
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-0 py-10 relative">
         {/* خلفية بلور */}
-        <div className="size-[520px] rounded-full absolute blur-[300px] -z-10 bg-[#FBFFE1]"></div>
+        <div className="size-[520px] rounded-full absolute blur-[300px] -z-10 "></div>
 
         {/* الصورة */}
         <motion.img
@@ -42,8 +41,7 @@ const About = () => {
         >
           <h1 className="text-3xl font-semibold">Our Latest features</h1>
           <p className="text-sm text-slate-500 mt-2">
-            Ship Beautiful Frontends Without the Overhead — Customizable,
-            Scalable and Developer-Friendly UI Components.
+            Engaging, hands-on courses that make learning fun, practical, and future-ready — designed to spark creativity and problem-solving skills.
           </p>
 
           <div className="flex flex-col gap-10 mt-6">
@@ -57,10 +55,9 @@ const About = () => {
               </div>
               <div>
                 <h3 className="text-base font-medium text-slate-600">
-                  Lightning-Fast Performance
-                </h3>
+Future-Ready Skills                </h3>
                 <p className="text-sm text-slate-500">
-                  Built with speed — minimal load times and optimized.
+We equip students with essential STEM knowledge to excel in school and thrive in their careers.
                 </p>
               </div>
             </div>
@@ -75,11 +72,9 @@ const About = () => {
               </div>
               <div>
                 <h3 className="text-base font-medium text-slate-600">
-                  Beautifully Designed Components
-                </h3>
+Interactive & Modern Learning                </h3>
                 <p className="text-sm text-slate-500">
-                  Modern, pixel-perfect UI components ready for any project.
-                </p>
+Dynamic, project-based lessons with a focus on innovation, teamwork, and real-world application.                </p>
               </div>
             </div>
 
@@ -93,11 +88,9 @@ const About = () => {
               </div>
               <div>
                 <h3 className="text-base font-medium text-slate-600">
-                  Plug-and-Play Integration
-                </h3>
+Easy to Join, Fun to Learn                </h3>
                 <p className="text-sm text-slate-500">
-                  Simple setup with support for React, Next.js and Tailwind css.
-                </p>
+Flexible programs with simple enrollment — supported by a dedicated team of instructors passionate about teaching and inspiring.                </p>
               </div>
             </div>
           </div>

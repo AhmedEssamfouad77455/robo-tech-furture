@@ -1,13 +1,12 @@
 import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
-import About from "./pages/About"
-import Curriculum from "../pages/Curriculum"
-import Gallery from "../pages/Gallery"
-import Achievement from "../pages/Achievement"
-import Content from "../pages/Content"
+import Curriculum from "./pages/Curriculum"
+import Gallery from "./pages/Gallery"
+import Achievement from "./pages/Achievement"
+import Content from "./pages/Content"
 import Footer from "./components/Footer"
-
+import About from "./pages/About"
 const App = () => {
   return (
     <div>
