@@ -5,20 +5,17 @@ import { FaUserGraduate } from "react-icons/fa";
 export default function CurriculumAge() {
   const { scrollYProgress } = useScroll();
 
-  // حركة الأيقونة
   const y = useTransform(
     scrollYProgress,
     [0, 0.25, 0.5, 0.75, 1],
     [0, -500, 0, -500, 0]
   );
 
-  // inView للكشف عن القسم
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // حاوية القسم
   const containerVariants = {
     hidden: { height: 0, opacity: 0 },
     visible: {
@@ -32,7 +29,6 @@ export default function CurriculumAge() {
     },
   };
 
-  // حركة العناصر الداخلية
   const itemVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.95 },
     visible: {
@@ -54,9 +50,9 @@ export default function CurriculumAge() {
       {/* العنوان */}
       <motion.h1
         variants={itemVariants}
-        className="text-center text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl"
+        className="text-center text-orange-400 text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl"
       >
-        Pricing
+        Curriculum by Age Group
       </motion.h1>
 
       {/* الوصف */}
@@ -79,62 +75,64 @@ export default function CurriculumAge() {
           className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 p-6"
         >
           <div className="flex flex-col items-center border-b border-gray-300 pb-6">
-            <span className="mb-6 text-gray-800">Free</span>
-            <span className="mb-3 text-4xl font-medium">$0/mo</span>
-            <span className="text-gray-500">Best for 1-5 users</span>
+             <span className="mb-3 text-4xl font-medium">Ages 8 - 12</span>
+    <span className="text-gray-500">Academy Curriculum</span>
           </div>
           <div className="space-y-4 py-9">
-            <Feature checked text="One workspace" />
-            <Feature checked text="Email support" />
-            <Feature text="Basic analytics" />
-            <Feature text="Team collaboration" />
-            <Feature text="Priority support" />
-            <Feature text="Unlimited file storage" />
+            <Feature checked text="Introduction to programming basics" />
+            <Feature checked text="Interactive robotics lessons" />
+            <Feature checked text="Hands-on STEM experiments" />
+            <Feature checked text="Creative project building" />
+            <Feature checked text="Logical thinking development" />
+            <Feature checked text="Teamwork and collaboration skills" />
           </div>
         </motion.div>
 
         {/* Card 2 */}
-        <motion.div
-          variants={itemVariants}
-          className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 p-6"
-        >
-          <div className="flex flex-col items-center border-b border-gray-300 pb-6">
-            <span className="mb-6 text-gray-800">Pro</span>
-            <span className="mb-3 text-4xl font-medium">$79/mo</span>
-            <span className="text-gray-500">Best for 5-50 users</span>
-          </div>
-          <div className="space-y-4 py-9">
-            <Feature checked text="One workspace" />
-            <Feature checked text="Email support" />
-            <Feature checked text="Basic analytics" />
-            <Feature checked text="Team collaboration" />
-            <Feature text="Priority support" />
-            <Feature text="Unlimited file storage" />
-          </div>
-        </motion.div>
+      <motion.div
+  variants={itemVariants}
+  className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 p-6"
+>
+  <div className="flex flex-col items-center border-b border-gray-300 pb-6">
+    <span className="mb-3 text-4xl font-medium">Ages 12 - 15</span>
+    <span className="text-gray-500">Academy Curriculum</span>
+  </div>
 
-        {/* Card 3 */}
+  {/* Features */}
+  <div className="space-y-4 py-9">
+    <Feature checked text="Advanced programming concepts" />
+    <Feature checked text="Robotics and automation projects" />
+    <Feature checked text="STEM problem-solving challenges" />
+    <Feature checked text="Web development basics" />
+    <Feature checked text="Critical and analytical thinking" />
+    <Feature checked text="Collaboration on real-world projects" />
+  </div>
+</motion.div>
+
+
         <motion.div
-          variants={itemVariants}
-          className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 p-6"
-        >
-          <div className="flex flex-col items-center border-b border-gray-300 pb-6">
-            <span className="mb-6 text-gray-800">Enterprise</span>
-            <span className="mb-3 text-4xl font-medium">Contact us</span>
-            <span className="text-gray-500">Best for 50+ users</span>
-          </div>
-          <div className="space-y-4 py-9">
-            <Feature checked text="One workspace" />
-            <Feature checked text="Email support" />
-            <Feature checked text="Basic analytics" />
-            <Feature checked text="Team collaboration" />
-            <Feature checked text="Priority support" />
-            <Feature checked text="Unlimited file storage" />
-          </div>
-        </motion.div>
+  variants={itemVariants}
+  className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 p-6"
+>
+  {/* Title */}
+  <div className="flex flex-col items-center border-b border-gray-300 pb-6">
+    <span className="mb-3 text-4xl font-medium">Ages 15 - 18</span>
+    <span className="text-gray-500">Academy Curriculum</span>
+  </div>
+
+  {/* Features */}
+  <div className="space-y-4 py-9">
+    <Feature checked text="Full-stack web development" />
+    <Feature checked text="Artificial Intelligence & Machine Learning basics" />
+    <Feature checked text="Advanced robotics & engineering" />
+    <Feature checked text="Data structures & algorithms introduction" />
+    <Feature checked text="Entrepreneurship & innovation projects" />
+    <Feature checked text="Capstone projects with real-world applications" />
+  </div>
+</motion.div>
+
       </motion.div>
 
-      {/* الأيقونة */}
       <motion.div
         style={{ y }}
         className="absolute bottom-2 right-[-80px] -translate-y-1/2"
@@ -145,13 +143,12 @@ export default function CurriculumAge() {
   );
 }
 
-// كومبوننت للمميزات
 function Feature({ checked = false, text }) {
   return (
     <div className="flex items-center gap-3">
       <span
         className={`grid size-5 place-content-center rounded-full text-sm ${
-          checked ? "bg-indigo-500 text-white" : "bg-gray-200 text-gray-600"
+          checked ? "bg-orange-500 text-white" : "bg-gray-200 text-gray-600"
         }`}
       >
         {checked ? (

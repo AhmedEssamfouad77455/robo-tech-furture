@@ -12,7 +12,7 @@ export default function Gallery() {
 
   return (
     <section className="min-h-screen py-20 px-6 bg-slate-50 my-20">
-      <h1 className="text-3xl font-semibold text-center mx-auto">
+      <h1 className="text-3xl  text-orange-400 font-semibold text-center mx-auto">
         Our Latest Creations
       </h1>
       <p className="text-sm text-slate-500 text-center mt-2 max-w-lg mx-auto">

@@ -49,14 +49,14 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 bg-[#ec407a] w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-[9999] ${isScrolled
+            className={`fixed top-0 left-0  bg-white  w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-[9999]  text-orange-400 ${isScrolled
                     ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4"
                     : "py-4 md:py-6"
                 }`}
         >
             {/* Logo */}
-            <a href="/" className="flex items-center gap-2 text-white font-bold">
-                LOGO
+            <a href="/" className="flex text-3xl items-center gap-2  font-bold">
+                Robo TecH Future
             </a>
 
             {/* Desktop Nav */}
@@ -65,12 +65,12 @@ const Navbar = () => {
                     <a
                         key={i}
                         href={link.path}
-                        className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"
+                        className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-orange-400"
                             }`}
                     >
                         {link.name}
                         <div
-                            className={`${isScrolled ? "bg-gray-700" : "bg-white"
+                            className={`${isScrolled ? "bg-gray-700" : "bg-orange-400"
                                 } h-0.5 w-0 group-hover:w-full transition-all duration-300`}
                         />
                     </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
                     <button
                         type="button"
                         onClick={() => setCategoryOpen(!isCategoryOpen)}
-                        className={`group px-4 py-2 rounded ${isScrolled ? "text-gray-700" : "text-white "
+                        className={`group px-4 py-2 rounded ${isScrolled ? "text-gray-700" : "text-orange-400 "
                             }`}
                     >
                       <div className="flex items-center gap-1">
@@ -102,7 +102,7 @@ const Navbar = () => {
                         </span>
                                 </div>
                         <div
-                            className={`${isScrolled ? "bg-gray-700" : "bg-white"
+                            className={`${isScrolled ? "bg-gray-700" : "bg-orange-400"
                                 } h-0.5 w-0 group-hover:w-full transition-all duration-300`}
                         />
                     </button>
@@ -124,12 +124,12 @@ const Navbar = () => {
 
                 <a
                     href="/contact-us"
-                    className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"
+                    className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-orange-400"
                         }`}
                 >
                     Contact Us
                     <div
-                        className={`${isScrolled ? "bg-gray-700" : "bg-white"
+                        className={`${isScrolled ? "bg-gray-700" : "bg-orange-400"
                             } h-0.5 w-0 group-hover:w-full transition-all duration-300`}
                     />
                 </a>
@@ -139,7 +139,7 @@ const Navbar = () => {
             <div className="md:hidden">
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <svg
-                        className={`h-6 w-6 ${isScrolled ? "text-gray-700" : "text-white"}`}
+                        className={`h-6 w-6 ${isScrolled ? "text-gray-700" : "text-orange-400"}`}
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"

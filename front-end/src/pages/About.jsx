@@ -1,7 +1,25 @@
 import { useState } from "react"
-
+import { useInView } from "react-intersection-observer"
+import { motion } from "framer-motion"
 const About = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren:.2,
+        delayChildren:.3
+      } 
+    }
+  }
+  const itemVariants = {
+    hidden: {opacity:0, y:20, scale:.98},
+    visible: {
+      opacity:1, y:0, scale:1,
+      transition: {duration: .8, ease: "easeOut"}
+    }
+  }
   const [openIndex, setOpenIndex] = useState(null)
+  const {ref:heroRef, inView :heroIsView} = useInView({threshold:.2})
   const faqsData = [
     {
       question: 'Lightning-Fast Performance',
@@ -26,16 +44,22 @@ const About = () => {
   ]
 
   return (
-    <div className='my-24 flex flex-col items-center text-center text-slate-800 px-3'>
-      <p className='text-base font-medium text-slate-600'>FAQ</p>
-      <h1 className='text-3xl md:text-4xl font-semibold mt-2'>
+    <motion.div 
+    
+    ref={heroRef}
+    variants={containerVariants}
+    initial="hidden"
+    animate={heroIsView ? "visible" : "hidden"}
+    className='my-24 flex flex-col items-center text-center text-slate-800 px-3'>
+      <motion.p variants={itemVariants} className='text-base font-medium text-slate-600'>FAQ</motion.p>
+      <motion.h1 variants={itemVariants} className='text-3xl md:text-4xl font-semibold mt-2'>
         Frequently Asked Questions
-      </h1>
-      <p className='text-sm text-slate-500 mt-4 max-w-sm'>
+      </motion.h1>
+      <motion.p variants={itemVariants} className='text-sm text-slate-500 mt-4 max-w-sm'>
         Proactively answering FAQs boosts user confidence and cuts down on support tickets.
-      </p>
+      </motion.p>
 
-      <div className='max-w-xl w-full mt-6 flex flex-col gap-4 items-start text-left'>
+      <motion.div variants={itemVariants} className='max-w-xl w-full mt-6 flex flex-col gap-4 items-start text-left'>
         {faqsData.map((faq, index) => (
           <div key={index} className='flex flex-col items-start w-full'>
             <div
@@ -71,7 +95,7 @@ const About = () => {
             </p>
           </div>
         ))}
-      </div>
+      </motion.div>
         <section className=" my-24 flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4">
                 <div className="relative shadow-2xl shadow-indigo-600/40 rounded-2xl overflow-hidden shrink-0">
                     <img className="max-w-md w-full object-cover rounded-2xl"
@@ -138,7 +162,7 @@ const About = () => {
             </div>
 
             </section>
-    </div>
+    </motion.div>
   )
 }
 

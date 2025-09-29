@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import myImage from "../assets/WhatsApp Image 2025-09-28 at 14.45.37_458d56a1.jpg";
 
 const About = () => {
   return (
@@ -10,10 +11,10 @@ const About = () => {
       viewport={{ once: true, amount: 0.2 }} // مرة واحدة عند الدخول
       className="py-16"
     >
-      <h1 className="text-3xl font-semibold text-center mx-auto">
+      <h1 className="text-3xl font-semibold text-center mx-auto text-orange-400">
        About Robo Tech
       </h1>
-      <p className="text-sm text-slate-500 text-center mt-2 max-w-md mx-auto">
+      <p className="text-sm text-gray-400 text-center mt-2 max-w-md mx-auto">
       An innovative academy shaping the next generation of thinkers and creators — empowering students with STEM, coding, robotics and engineering skills to turn imagination into reality.
       </p>
 
@@ -28,18 +29,17 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="max-w-sm w-full rounded-xl h-auto"
-          src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?q=80&w=830&h=844&auto=format&fit=crop"
+          src={myImage}
           alt=""
         />
 
-        {/* النصوص */}
         <motion.div
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-3xl font-semibold">Our Latest features</h1>
+          <h1 className="text-3xl font-semibold text-orange-400" >Our Latest features</h1>
           <p className="text-sm text-slate-500 mt-2">
             Engaging, hands-on courses that make learning fun, practical, and future-ready — designed to spark creativity and problem-solving skills.
           </p>
@@ -54,9 +54,9 @@ const About = () => {
                 />
               </div>
               <div>
-                <h3 className="text-base font-medium text-slate-600">
+                <h3 className="text-base font-medium text-orange-400">
 Future-Ready Skills                </h3>
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-gray-400">
 We equip students with essential STEM knowledge to excel in school and thrive in their careers.
                 </p>
               </div>
@@ -71,9 +71,9 @@ We equip students with essential STEM knowledge to excel in school and thrive in
                 />
               </div>
               <div>
-                <h3 className="text-base font-medium text-slate-600">
+                <h3 className="text-base font-medium text-orange-400">
 Interactive & Modern Learning                </h3>
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-gray-400">
 Dynamic, project-based lessons with a focus on innovation, teamwork, and real-world application.                </p>
               </div>
             </div>
@@ -87,9 +87,9 @@ Dynamic, project-based lessons with a focus on innovation, teamwork, and real-wo
                 />
               </div>
               <div>
-                <h3 className="text-base font-medium text-slate-600">
+                <h3 className="text-base font-medium text-orange-400">
 Easy to Join, Fun to Learn                </h3>
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-gray-400">
 Flexible programs with simple enrollment — supported by a dedicated team of instructors passionate about teaching and inspiring.                </p>
               </div>
             </div>

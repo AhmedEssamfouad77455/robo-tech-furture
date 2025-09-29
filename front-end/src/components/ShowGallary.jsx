@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import imageShow from "../assets/ShowImage.jpg";
+import imageShow1 from "../assets/ShowImage5.jpg";
+import imageShow2 from "../assets/ShowImage6.jpg";
+import imageShow3 from "../assets/ShowImage4.jpg";
+import imageShow4 from "../assets/ShowImage1.jpg";
+import imageShow5 from "../assets/ShowImage3.jpg";
+import imageShow6 from "../assets/ShowImage7.jpg";
 
 const ShowGallery = () => {
   const [stopScroll, setStopScroll] = useState(false);
@@ -8,23 +15,35 @@ const ShowGallery = () => {
   const cardData = [
     {
       title: "Unlock Your Creative Flow",
-      image:
-        "https://images.unsplash.com/photo-1543487945-139a97f387d5?w=1200&auto=format&fit=crop&q=60",
+      image:imageShow ,
     },
     {
       title: "Design Your Digital Future",
-      image:
-        "https://images.unsplash.com/photo-1529254479751-faeedc59e78f?w=1200&auto=format&fit=crop&q=60",
+      image: imageShow1,
     },
     {
       title: "Build with Passion, Ship with Pride",
-      image:
-        "https://images.unsplash.com/photo-1618327907215-4e514efabd41?w=1200&auto=format&fit=crop&q=60",
+      image:imageShow2
     },
     {
       title: "Think Big, Code Smart",
-      image:
-        "https://images.unsplash.com/photo-1583407723467-9b2d22504831?w=1200&auto=format&fit=crop&q=60",
+      image:imageShow3
+        
+    },
+    {
+      title: "Think Big, Code Smart",
+      image:imageShow4
+        
+    },
+    {
+      title: "Think Big, Code Smart",
+      image:imageShow5
+        
+    },
+    {
+      title: "Think Big, Code Smart",
+      image:imageShow6
+        
     },
   ];
 
@@ -51,11 +70,11 @@ const ShowGallery = () => {
 
   return (
     <div
-      className="overflow-hidden w-full relative max-w-6xl mx-auto"
+      className="overflow-hidden w-full relative max-w-6xl mx-auto mt-52"
       onMouseEnter={() => setStopScroll(true)}
       onMouseLeave={() => setStopScroll(false)}
     >
-         <h1 className="text-3xl font-semibold text-center mx-auto">
+         <h1 className="text-orange-400 text-4xl font-semibold text-center mx-auto">
       Our Winning Moments
       </h1>
       <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent" />
@@ -84,7 +103,7 @@ const ShowGallery = () => {
               className="w-full h-full object-cover"
             />
             <div className="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20">
-              <p className="text-white text-lg font-semibold text-center">
+              <p className="text-orange-300 text-lg font-semibold text-center">
                 {card.title}
               </p>
             </div>

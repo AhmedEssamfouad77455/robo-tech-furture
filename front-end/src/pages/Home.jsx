@@ -56,34 +56,11 @@ import About from "../components/About";
 import ShowGallery from "../components/ShowGallary";
 import CurriculumAge from "../components/CurriculumAge";
 export default function Home() {
-  const [stopScroll, setStopScroll] = useState(false);
+ 
 
-  const cardData = [
-    {
-      title: "Unlock Your Creative Flow",
-      image: "https://images.unsplash.com/photo-1543487945-139a97f387d5?w=1200&auto=format&fit=crop&q=60",
-    },
-    {
-      title: "Design Your Digital Future",
-      image: "https://images.unsplash.com/photo-1529254479751-faeedc59e78f?w=1200&auto=format&fit=crop&q=60",
-    },
-    {
-      title: "Build with Passion, Ship with Pride",
-      image: "https://images.unsplash.com/photo-1618327907215-4e514efabd41?w=1200&auto=format&fit=crop&q=60",
-    },
-    {
-      title: "Think Big, Code Smart",
-      image: "https://images.unsplash.com/photo-1583407723467-9b2d22504831?w=1200&auto=format&fit=crop&q=60",
-    },
-  ];
-  // لكل سكشن Ref و inView خاص بيه
-  const { scrollY } = useScroll();
+  
 
-  const backgroundY = useTransform(scrollY, [0, 500], ["0%", "50%"])
-  const { ref: heroRef, inView: heroInView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const { ref: featuresRef, inView: featuresInView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const { ref: bannerRef, inView: bannerInView } = useInView({ triggerOnce: true, threshold: 0.2 });
+ 
 
 
 
