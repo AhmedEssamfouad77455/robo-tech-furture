@@ -50,7 +50,7 @@ export default function CurriculumAge() {
       {/* العنوان */}
       <motion.h1
         variants={itemVariants}
-        className="text-center text-orange-400 text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl"
+        className="text-center text-slate-500 text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl"
       >
         Curriculum by Age Group
       </motion.h1>
@@ -64,12 +64,10 @@ export default function CurriculumAge() {
         control.
       </motion.p>
 
-      {/* الكروت */}
       <motion.div
         variants={containerVariants}
         className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-10"
       >
-        {/* Card 1 */}
         <motion.div
           variants={itemVariants}
           className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 p-6"
@@ -148,7 +146,7 @@ function Feature({ checked = false, text }) {
     <div className="flex items-center gap-3">
       <span
         className={`grid size-5 place-content-center rounded-full text-sm ${
-          checked ? "bg-orange-500 text-white" : "bg-gray-200 text-gray-600"
+          checked ? "bg-[#cb6ce6] text-white" : "bg-gray-200 text-gray-600"
         }`}
       >
         {checked ? (

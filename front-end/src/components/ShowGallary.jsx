@@ -61,7 +61,7 @@ const ShowGallery = () => {
   });
   const { ref: aboutRef, inView: aboutInView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.2 
   });
   const { ref: bannerRef, inView: bannerInView } = useInView({
     triggerOnce: true,
@@ -74,7 +74,7 @@ const ShowGallery = () => {
       onMouseEnter={() => setStopScroll(true)}
       onMouseLeave={() => setStopScroll(false)}
     >
-         <h1 className="text-orange-400 text-4xl font-semibold text-center mx-auto">
+         <h1 className="text-slate-500 text-4xl font-semibold text-center mx-auto">
       Our Winning Moments
       </h1>
       <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent" />
@@ -103,7 +103,7 @@ const ShowGallery = () => {
               className="w-full h-full object-cover"
             />
             <div className="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20">
-              <p className="text-orange-300 text-lg font-semibold text-center">
+              <p className=" text-lg font-semibold text-center">
                 {card.title}
               </p>
             </div>

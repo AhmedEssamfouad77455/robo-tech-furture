@@ -49,7 +49,7 @@ export default function Banner() {
 
       <motion.div
         variants={itemVariants}
-        className="h-[3px] w-32 my-1 bg-gradient-to-l from-transparent to-orange-400"
+        className="h-[3px] w-32 my-1 bg-gradient-to-l from-transparent  to-[#CB6CE6]"
       />
 
       <motion.p
@@ -64,7 +64,7 @@ export default function Banner() {
         variants={itemVariants}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="px-8 py-2.5 mt-4 text-sm bg-gradient-to-r from-orange-500 to-orange-400 transition duration-300 text-white rounded-full mb-20"
+        className="px-8 py-2.5 mt-4 text-sm bg-gradient-to-r from-[#CB6CE6] to-[#d46df0] transition duration-300 text-white rounded-full mb-20"
       >
      Start Learning
 
