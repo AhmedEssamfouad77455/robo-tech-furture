@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { assets } from "../assets/assets";
 
 const itemVariants = {
   hidden: { opacity: 0, scale: 0.9, y: 40 },
@@ -11,8 +12,8 @@ export default function Gallery() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="min-h-screen py-20 px-6 bg-slate-50 my-20">
-      <h1 className="text-3xl  text-orange-400 font-semibold text-center mx-auto">
+    <section className="min-h-screen py-20 px-6 bg-slate-50  my-20">
+      <h1 className="text-3xl  text-purple-400 font-semibold text-center mx-auto">
         Our Latest Creations
       </h1>
       <p className="text-sm text-slate-500 text-center mt-2 max-w-lg mx-auto">
@@ -24,13 +25,7 @@ export default function Gallery() {
         ref={ref}
         className="flex flex-wrap items-center justify-center mt-12 gap-4 max-w-5xl mx-auto"
       >
-        {[
-          "https://images.unsplash.com/photo-1719368472026-dc26f70a9b76?q=80&w=736&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1649265825072-f7dd6942baed?q=80&w=798&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1555212697-194d092e3b8f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1729086046027-09979ade13fd?q=80&w=862&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1601568494843-772eb04aca5d?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1585687501004-615dfdfde7f1?q=80&w=703&auto=format&fit=crop",
+        {[assets.missnour,assets.eng_moustafa,assets.all,assets.gallery ,assets.G2,assets.img1,assets.img4,assets.showImage1,assets.G3 , assets.gallery1 ,assets.gallery2 , assets.gallery3
         ].map((src, index) => (
           <motion.div
             key={index}
@@ -45,7 +40,7 @@ export default function Gallery() {
               className="size-56 object-cover object-top"
             />
             <div className="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <h1 className="text-xl font-medium">Image Title</h1>
+              <h1 className="text-xl font-medium">roboTech </h1>
               <a
                 href="#"
                 className="flex items-center gap-1 text-sm text-white/70"

@@ -8,8 +8,20 @@ const About = () => {
   const yLeft = useTransform(scrollY, [0, 1500], [0, -700]);
   const yRight = useTransform(scrollY, [0, 1500], [0, -700]);
 
+  const yAirplane = useTransform(scrollY, [100, 400, 800], [-100, 100, 0]);
+
+
   return (
     <section className="p-16 relative overflow-hidden min-h-screen">
+      
+      <motion.div
+        className="flex justify-center mb-10 absolute top-10 left-0 right-0"
+        style={{ y: yAirplane }}
+        transition={{ type: "spring", stiffness: 80, damping: 20 }}
+      >
+        <img src={assets.airplane} alt="airplane" className="w-40 md:w-60" />
+      </motion.div>
+
       <motion.div
         className="absolute left-0 top-[100%] w-32 h-52"
         style={{ y: yLeft }}
@@ -26,7 +38,7 @@ const About = () => {
         <img src={assets.legoRight} className="w-32" alt="lego right" />
       </motion.div>
 
-      <h1 className="text-3xl font-semibold text-slate-500 text-center mx-auto">
+      <h1 className="text-3xl font-semibold text-slate-500 text-center mx-auto mt-50">
         About RoboTech
       </h1>
       <p className="text-sm text-gray-400 text-center mt-2 max-w-md mx-auto">
@@ -42,7 +54,7 @@ const About = () => {
           className="w-[300px] rounded-xl h-auto"
           src={myImage}
           alt="main logo"
-          initial={{ opacity: 0, }}
+          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         />
@@ -52,7 +64,6 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-
         >
           <h1 className="text-3xl font-semibold text-slate-500">
             Our Latest features

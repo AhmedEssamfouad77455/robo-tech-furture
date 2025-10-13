@@ -61,7 +61,7 @@ const Feature = () => {
   return (
     <motion.section
       ref={featuresRef}
-      className="w-screen overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+      className="w-screen overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 "
       variants={containerVariants}
       initial="hidden"
       animate={featuresInView ? "visible" : "hidden"}
