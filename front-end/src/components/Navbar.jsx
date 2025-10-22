@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
+import { path } from "framer-motion/client";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -9,13 +10,15 @@ const Navbar = () => {
     { name: "About Us", path: "/about" },
     { name: "Achievements", path: "/achievement" },
     { name: "Gallery", path: "/gallery" },
+    {name :'Curriculum' , path:'/curriculum' }
+    
+    ,
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCategoryOpen, setCategoryOpen] = useState(false);
 
-  // القائمة المنسدلة
   const category = [
     { name: "3-6 Years Projects", path: "/curriculum#three-years" },
     { name: "6-9 Years Projects", path: "/curriculum#six-years" },
@@ -26,11 +29,10 @@ const Navbar = () => {
 
   const handleSelect = (item) => {
     setCategoryOpen(false);
-    setIsMenuOpen(false); // علشان يقفل المينيو في الموبايل
+    setIsMenuOpen(false);
     navigate(item.path);
   };
 
-  // إغلاق القائمة لو ضغطت برّه
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -61,7 +63,6 @@ const Navbar = () => {
           : "py-4 md:py-6"
       }`}
     >
-      {/* Logo */}
       <a
         href="/"
       
@@ -69,7 +70,6 @@ const Navbar = () => {
       <img src={assets.logo} className="w-40 h-10" alt="" />
       </a>
 
-      {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-6">
         {navLinks.map((link, i) => (
           <a
@@ -86,41 +86,7 @@ const Navbar = () => {
           </a>
         ))}
 
-        {/* Dropdown Curriculum */}
-     <div className="relative group inline-block">
-      {/* الزر */}
-      <button
-        type="button"
-        className="flex items-center gap-1 px-4 py-2 rounded text-gray-700 group-hover:text-[#CB6CE6]"
-      >
-        Curriculum
-        <svg
-          className="w-4 h-4 transform transition-transform duration-300 group-hover:rotate-180"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-        
-
-      {/* القائمة */}
-      <ul className="absolute  top-5 hidden group-hover:block w-52 bg-white border border-gray-300 rounded shadow-md mt-2 py-2 z-10 transition-all duration-300 ease-out">
-        {category.map((item) => (
-          <li
-            key={item.name}
-            className="px-4 py-2 hover:bg-[#CB6CE6] hover:text-white cursor-pointer transition-colors duration-200"
-          >
-            <a href={item.path}>
-
-            {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+     
       </div>
 <a href="/contact-us" className="  hidden md:block bg-[#CB6CE6] text-white font-bold px-6 py-2 rounded-lg">   Contact Us </a>
       {/* Mobile Menu Button */}
@@ -169,37 +135,7 @@ const Navbar = () => {
         ))}
 
         {/* Dropdown in Mobile */}
-      <div className="relative group inline-block">
-      {/* الزر */}
-      <button
-        type="button"
-        className="flex items-center gap-1 px-4 py-2 rounded text-gray-700 group-hover:text-[#CB6CE6]"
-      >
-        Curriculum
-        <svg
-          className="w-4 h-4 transform transition-transform duration-300 group-hover:rotate-180"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-        
-
-      {/* القائمة */}
-      <ul className="absolute  hidden group-hover:block w-52 bg-white border border-gray-300 rounded shadow-md mt-2 py-2 z-10 transition-all duration-300 ease-out">
-        {category.map((item) => (
-          <li
-            key={item.name}
-            className="px-4 py-2 hover:bg-[#CB6CE6] hover:text-white cursor-pointer transition-colors duration-200"
-          >
-            {item.name}
-          </li>
-        ))}
-      </ul>
-    </div>
+     
     <a href="/contact-us">Contact-us</a>
       </div>
     </nav>

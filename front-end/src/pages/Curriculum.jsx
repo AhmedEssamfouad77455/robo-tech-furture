@@ -1,13 +1,9 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 
-// Curriculums.jsx
-// A single-file React component (Tailwind + Framer Motion) showing
-// learning programs by age group. Each course has an image, title, and detailed description.
 
 const programs = [
   {
-    ageRange: "Ages 7 - 12",
     description:
       "Fun and interactive programs designed to introduce kids to the world of technology and programming.",
     courses: [
@@ -35,7 +31,6 @@ const programs = [
     ],
   },
   {
-    ageRange: "Ages 12 - 15",
     description:
       "Intermediate-level programs that combine creativity, logic and hands-on technical foundations.",
     courses: [
@@ -72,7 +67,6 @@ const programs = [
     ],
   },
   {
-    ageRange: "Ages 15 - 18",
     description:
       "Advanced programs that explore AI, IoT, full-stack web, and real-world technology applications.",
     courses: [
@@ -156,7 +150,6 @@ const Curriculums = () => {
             <section key={gi}>
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h2 className="text-2xl font-semibold">{group.ageRange}</h2>
                   <p className="text-sm text-gray-600">{group.description}</p>
                 </div>
              
@@ -181,7 +174,7 @@ const Curriculums = () => {
 
         {/* Modal for selected course details */}
         {selected && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 mt-20">
             <div
               className="absolute inset-0 bg-black/50"
               onClick={() => setSelected(null)}
